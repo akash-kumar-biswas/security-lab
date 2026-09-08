@@ -3,9 +3,22 @@ using namespace std;
 
 using ll = long long;
 
+bool isPrimtive(int g, ll p){
+    set<ll> s;
+    ll cur = 1;
+    for (ll i = 1; i < p; i++){
+        cur = (cur * g) % p;
+        s.insert(cur);
+    }
+
+    return s.size() == p - 1;
+}
+
 
 int main(){
-    ll p = 79, g;
+
+    /*
+    ll p = 107, g;
 
     cout << "Enter g: " ;
     cin >> g;
@@ -28,12 +41,20 @@ int main(){
             break;
         }
     }
+    */
 
-    if(f){
-        cout << "Valid";
+    ll p = 107;
+    ll g = 2;
+
+    int f = 0;
+    while(1){
+        if(isPrimtive(g, p)){
+            break;
+        }
+        g++;
     }
-    else
-        cout << "Invalid";
+  
+    cout << g;
 
 
     return 0;
