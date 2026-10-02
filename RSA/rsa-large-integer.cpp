@@ -53,6 +53,20 @@ ostream& operator<<(ostream& out, ll x){
     out << s;
     return out;
 }
+
+istream& operator>>(istream& in, ll &x){
+    string s;
+    in >> s;
+
+    x = 0;
+
+    for(char c : s){
+        x = x * 10 + (c - '0');
+    }
+
+    return in;
+}
+
 int main(){
     ll p = 1e9 + 7, q = 1e9 + 9;
 
