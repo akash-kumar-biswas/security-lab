@@ -24,7 +24,7 @@ string decrypt(string text, int s){
 }
 
 int main(){
-    string c = "khoor567";
+    string c = "khoor5672";
     
     int lcm = 26 * 10 / __gcd(26, 10);
     for(int key = 0; key < lcm; key++){
