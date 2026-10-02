@@ -75,24 +75,24 @@ int main(){
     ll m = 102;
     cout << "Original: " << m << "\n";
 
-    ll c = modpow(m, e2, n2);
-
-    cout << "ciphertext: " << c << "\n";
-
-    ll s = modpow(c, d1, n1);
+    ll s = modpow(m, d1, n1);
 
     cout << "signature: " << s << "\n";
 
-    ll v = modpow(s, e1, n1);
+    ll c = modpow(s, e2, n2);
 
-    cout << "verificatio: " << v << "\n";
+    cout << "ciphertext: " << c << "\n";
 
-    ll dec = modpow(v, d2, n2);
+    ll dec = modpow(c, d2, n2);
 
     cout << "decrypted: " << dec << "\n";
 
+    ll v = modpow(dec, e1, n1);
 
-    if(dec == m)
+    cout << "verificatio: " << v << "\n";
+
+
+    if(m == v)
         cout << "valid\n";
     else
         cout << "invalid\n";
