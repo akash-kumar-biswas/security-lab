@@ -16,6 +16,8 @@ string encrypt(string text, int s){
     }
     return result;
 }
+
+
  string decrypt(string text, int s){
     string result = "";
     for( char c : text){
