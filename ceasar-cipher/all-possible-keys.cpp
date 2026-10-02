@@ -10,11 +10,11 @@ string decrypt(string text, int s){
 
     for(auto c: text){
         if('A' <= c && c <= 'Z')
-            res += (char)(norm(c - 'A' - s, 26) + 'A');
+            res += norm(c - 'A' - s, 26) + 'A';
         else if('a' <= c && c <= 'z')
-            res += (char)(norm(c - 'a' - s, 26) + 'a');  
+            res += norm(c - 'a' - s, 26) + 'a';  
         else if('0' <= c && c <= '9')  
-            res += (char)(norm(c - '0' - s, 10) + '0');
+            res += norm(c - '0' - s, 10) + '0';
         else
             res += c;
         
