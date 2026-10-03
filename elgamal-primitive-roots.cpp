@@ -43,7 +43,7 @@ int main(){
     }
     */
 
-    ll p = 107;
+    ll p = 79;
     ll g = 2;
 
     int f = 0;
