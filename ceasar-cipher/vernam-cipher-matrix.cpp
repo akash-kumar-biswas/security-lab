@@ -68,7 +68,7 @@ string decrypt(string text, string key){
 
 int main(){
 
-    string arr[2][2] = {{"kuet", "ruet"},
+    string arr[2][2] = {{"kuet", "rert"},
                         {"buet", "cuet"}};
 
     string trans[2][2];
@@ -99,7 +99,7 @@ int main(){
     string trans_back[2][2];
     for(int i = 0; i < 2; i++){
         for(int j = 0; j < 2; j++){
-            trans_back[i][j] = trans[j][i];
+            trans_back[i][j] = dec[j][i];
         }
     }
 
@@ -109,7 +109,6 @@ int main(){
         }
         cout << endl;
     }   
-
 
     return 0;
 }
